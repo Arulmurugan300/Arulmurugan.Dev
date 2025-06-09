@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 interface FormData {
   name: string;
@@ -19,23 +21,30 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
-
-  const onSubmit = async (data: FormData) => {
+  const formRef = useRef();
+  const onSubmit = async () => {
     setIsSubmitting(true);
-    console.log("Form submitted:", data);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    
+    try {
+      const result = await emailjs.sendForm(
+        'service_4hm4py5',     // e.g., service_abc123
+        'template_gho0agf',    // e.g., template_xyz456
+        formRef.current,
+        'AjRbwFm_2_gGsi9ND'      // e.g., n3XwPz_something
+      );
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+    } catch (error) {
+      toast({
+        title: "Failed to send email.",
+        description: "Please try again later.",
+      });
+    }
     reset();
     setIsSubmitting(false);
   };
-
   const contactInfo = [
     {
       icon: Mail,
@@ -53,7 +62,7 @@ const Contact = () => {
       icon: MapPin,
       title: "Location",
       description: "Namakkal, Tamil Nadu, India",
-      action: null
+      action: "https://www.google.com/maps?q=Namakkal,+Tamil+Nadu,+India"
     }
   ];
 
@@ -186,7 +195,7 @@ const Contact = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                  <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">

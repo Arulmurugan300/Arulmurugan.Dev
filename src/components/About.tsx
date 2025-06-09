@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { User, Award, Target, Briefcase, GraduationCap } from "lucide-react";
 
 const About = () => {
+  const arulmuruganImage = "/asset/ARULMURUGAN_IMG.jpg";
   const MOBILE_BREAKPOINT = 768
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -49,7 +50,12 @@ const About = () => {
                     justifySelf: window.innerWidth < MOBILE_BREAKPOINT ? 'center' : 'auto'
                   }}
                 >
-                  <User className="w-32 h-32 text-blue-600" />
+                  {/* <User className="w-32 h-32 text-blue-600" /> */}
+                  <img 
+                      src={arulmuruganImage} 
+                      alt="arulmuruganImage"
+                      className={` h-96 object-cover transition-transform duration-300 group-hover:scale-110}`}
+                    />
                 </div>
                 <div 
                   className="absolute -bottom-4 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center md:w-24 md:h-24"

@@ -10,48 +10,48 @@ const Articles = () => {
   const articles = [
     {
       id: 1,
-      title: "Building Scalable React Applications with TypeScript",
-      excerpt: "Learn best practices for architecting large-scale React applications using TypeScript, including project structure, state management, and performance optimization.",
-      date: "2024-01-15",
-      readTime: "8 min read",
-      category: "React",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop",
+      title: "Angular Resource API: Modern Data Fetching Made Simple",
+      excerpt: "Angular’s Resource API represents a significant evolution in how we handle data fetching and state management in modern Angular applications.",
+      date: "2025-06-09",
+      readTime: "9 min read",
+      category: "Angular",
+      image: "/asset/ResourceApi.png",
       featured: true,
-      url:'https://example.com/building-scalable-react-applications-typescript'
+      url:'https://medium.com/@arulmurugan-madheswaran/angular-resource-api-modern-data-fetching-made-simple-61fc1c939072'
     },
-    {
-      id: 2,
-      title: "Modern CSS Techniques for Better User Interfaces",
-      excerpt: "Explore the latest CSS features including Grid, Flexbox, and CSS Variables to create responsive and maintainable user interfaces.",
-      date: "2024-01-10",
-      readTime: "6 min read",
-      category: "CSS",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
-      featured: false,
-      url:'https://example.com/modern-css-techniques-better-uis'
-    },
-    {
-      id: 3,
-      title: "Database Design Patterns for Modern Applications",
-      excerpt: "Understanding when to use SQL vs NoSQL databases, normalization strategies, and performance optimization techniques.",
-      date: "2024-01-05",
-      readTime: "10 min read",
-      category: "Database",
-      image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop",
-      featured: false,
-      url:'https://example.com/database-design-patterns-modern-applications'
-    },
-    {
-      id: 4,
-      title: "API Design Best Practices with Node.js",
-      excerpt: "Design robust and scalable APIs using Node.js and Express, including authentication, error handling, and documentation strategies.",
-      date: "2023-12-28",
-      readTime: "7 min read",
-      category: "Backend",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=250&fit=crop",
-      featured: false,
-      url:'https://example.com/api-design-best-practices-nodejs'
-    }
+    // {
+    //   id: 2,
+    //   title: "Modern CSS Techniques for Better User Interfaces",
+    //   excerpt: "Explore the latest CSS features including Grid, Flexbox, and CSS Variables to create responsive and maintainable user interfaces.",
+    //   date: "2024-01-10",
+    //   readTime: "6 min read",
+    //   category: "CSS",
+    //   image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
+    //   featured: false,
+    //   url:'https://example.com/modern-css-techniques-better-uis'
+    // },
+    // {
+    //   id: 3,
+    //   title: "Database Design Patterns for Modern Applications",
+    //   excerpt: "Understanding when to use SQL vs NoSQL databases, normalization strategies, and performance optimization techniques.",
+    //   date: "2024-01-05",
+    //   readTime: "10 min read",
+    //   category: "Database",
+    //   image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&h=250&fit=crop",
+    //   featured: false,
+    //   url:'https://example.com/database-design-patterns-modern-applications'
+    // },
+    // {
+    //   id: 4,
+    //   title: "API Design Best Practices with Node.js",
+    //   excerpt: "Design robust and scalable APIs using Node.js and Express, including authentication, error handling, and documentation strategies.",
+    //   date: "2023-12-28",
+    //   readTime: "7 min read",
+    //   category: "Backend",
+    //   image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=250&fit=crop",
+    //   featured: false,
+    //   url:'https://example.com/api-design-best-practices-nodejs'
+    // }
   ];
 
   // Show first article initially, then all when showAllArticles is true

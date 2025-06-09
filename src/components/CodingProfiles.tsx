@@ -21,14 +21,14 @@ const CodingProfiles = () => {
       stats: "5+ problems solved",
       color: "hover:bg-orange-600"
     },
-    {
-      name: "HackerRank",
-      description: "Programming skills and certifications",
-      icon: "https://hrcdn.net/fcore/assets/brand/typemark_60x200-7435b42d20.svg",
-      url: "https://hackerrank.com",
-      stats: "5-star problem solver",
-      color: "hover:bg-green-600"
-    }
+    // {
+    //   name: "HackerRank",
+    //   description: "Programming skills and certifications",
+    //   icon: "https://hrcdn.net/fcore/assets/brand/typemark_60x200-7435b42d20.svg",
+    //   url: "https://hackerrank.com",
+    //   stats: "5-star problem solver",
+    //   color: "hover:bg-green-600"
+    // }
   ];
 
   const containerVariants = {
@@ -69,7 +69,7 @@ const CodingProfiles = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {profiles.map((profile, index) => (
               <motion.div
                 key={profile.name}
